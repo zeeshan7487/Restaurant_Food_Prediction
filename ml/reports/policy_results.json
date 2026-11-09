@@ -1,0 +1,301 @@
+{
+  "trained_on_synthetic_data": false,
+  "rows_evaluated": 32698,
+  "manual": {
+    "buffer_0%": {
+      "prepared_total": 7774677,
+      "demand_total": 7457018,
+      "waste_total": 1498705,
+      "waste_pct_of_prepared": 19.28,
+      "shortage_total": 1181046,
+      "shortage_pct_of_demand": 15.84,
+      "service_level_pct": 55.6
+    },
+    "buffer_5%": {
+      "prepared_total": 8163411,
+      "demand_total": 7457018,
+      "waste_total": 1739538,
+      "waste_pct_of_prepared": 21.31,
+      "shortage_total": 1033145,
+      "shortage_pct_of_demand": 13.85,
+      "service_level_pct": 59.8
+    },
+    "buffer_10%": {
+      "prepared_total": 8552145,
+      "demand_total": 7457018,
+      "waste_total": 2002414,
+      "waste_pct_of_prepared": 23.41,
+      "shortage_total": 907287,
+      "shortage_pct_of_demand": 12.17,
+      "service_level_pct": 63.8
+    },
+    "buffer_15%": {
+      "prepared_total": 8940879,
+      "demand_total": 7457018,
+      "waste_total": 2284281,
+      "waste_pct_of_prepared": 25.55,
+      "shortage_total": 800420,
+      "shortage_pct_of_demand": 10.73,
+      "service_level_pct": 67.4
+    },
+    "buffer_20%": {
+      "prepared_total": 9329613,
+      "demand_total": 7457018,
+      "waste_total": 2582639,
+      "waste_pct_of_prepared": 27.68,
+      "shortage_total": 710044,
+      "shortage_pct_of_demand": 9.52,
+      "service_level_pct": 70.6
+    },
+    "buffer_30%": {
+      "prepared_total": 10107081,
+      "demand_total": 7457018,
+      "waste_total": 3219559,
+      "waste_pct_of_prepared": 31.85,
+      "shortage_total": 569496,
+      "shortage_pct_of_demand": 7.64,
+      "service_level_pct": 75.9
+    }
+  },
+  "ai": {
+    "service_level_50%": {
+      "prepared_total": 7094614,
+      "demand_total": 7457018,
+      "waste_total": 843220,
+      "waste_pct_of_prepared": 11.89,
+      "shortage_total": 1205624,
+      "shortage_pct_of_demand": 16.17,
+      "service_level_pct": 49.4
+    },
+    "service_level_70%": {
+      "prepared_total": 8840556,
+      "demand_total": 7457018,
+      "waste_total": 1945624,
+      "waste_pct_of_prepared": 22.01,
+      "shortage_total": 562086,
+      "shortage_pct_of_demand": 7.54,
+      "service_level_pct": 69.7
+    },
+    "service_level_80%": {
+      "prepared_total": 10138425,
+      "demand_total": 7457018,
+      "waste_total": 3004583,
+      "waste_pct_of_prepared": 29.64,
+      "shortage_total": 323175,
+      "shortage_pct_of_demand": 4.33,
+      "service_level_pct": 80.1
+    },
+    "service_level_90%": {
+      "prepared_total": 12235706,
+      "demand_total": 7457018,
+      "waste_total": 4920375,
+      "waste_pct_of_prepared": 40.21,
+      "shortage_total": 141687,
+      "shortage_pct_of_demand": 1.9,
+      "service_level_pct": 89.9
+    },
+    "service_level_95%": {
+      "prepared_total": 14496900,
+      "demand_total": 7457018,
+      "waste_total": 7104050,
+      "waste_pct_of_prepared": 49.0,
+      "shortage_total": 64168,
+      "shortage_pct_of_demand": 0.86,
+      "service_level_pct": 95.0
+    }
+  },
+  "matched_comparison": {
+    "buffer_0%": {
+      "manual": {
+        "prepared_total": 7774677,
+        "demand_total": 7457018,
+        "waste_total": 1498705,
+        "waste_pct_of_prepared": 19.28,
+        "shortage_total": 1181046,
+        "shortage_pct_of_demand": 15.84,
+        "service_level_pct": 55.6
+      },
+      "ai_safety_factor": 1.1306,
+      "ai": {
+        "prepared_total": 7595339,
+        "demand_total": 7457018,
+        "waste_total": 1110427,
+        "waste_pct_of_prepared": 14.62,
+        "shortage_total": 972106,
+        "shortage_pct_of_demand": 13.04,
+        "service_level_pct": 55.6
+      },
+      "waste_reduction_pct": 25.9,
+      "waste_reduction_ci95_pct": [
+        23.1,
+        28.6
+      ],
+      "shortage_change_pct": -17.7
+    },
+    "buffer_5%": {
+      "manual": {
+        "prepared_total": 8163411,
+        "demand_total": 7457018,
+        "waste_total": 1739538,
+        "waste_pct_of_prepared": 21.31,
+        "shortage_total": 1033145,
+        "shortage_pct_of_demand": 13.85,
+        "service_level_pct": 59.8
+      },
+      "ai_safety_factor": 1.1821,
+      "ai": {
+        "prepared_total": 7941179,
+        "demand_total": 7457018,
+        "waste_total": 1319871,
+        "waste_pct_of_prepared": 16.62,
+        "shortage_total": 835711,
+        "shortage_pct_of_demand": 11.21,
+        "service_level_pct": 59.8
+      },
+      "waste_reduction_pct": 24.1,
+      "waste_reduction_ci95_pct": [
+        21.5,
+        26.8
+      ],
+      "shortage_change_pct": -19.1
+    },
+    "buffer_10%": {
+      "manual": {
+        "prepared_total": 8552145,
+        "demand_total": 7457018,
+        "waste_total": 2002414,
+        "waste_pct_of_prepared": 23.41,
+        "shortage_total": 907287,
+        "shortage_pct_of_demand": 12.17,
+        "service_level_pct": 63.8
+      },
+      "ai_safety_factor": 1.2352,
+      "ai": {
+        "prepared_total": 8297880,
+        "demand_total": 7457018,
+        "waste_total": 1554779,
+        "waste_pct_of_prepared": 18.74,
+        "shortage_total": 713917,
+        "shortage_pct_of_demand": 9.57,
+        "service_level_pct": 63.8
+      },
+      "waste_reduction_pct": 22.4,
+      "waste_reduction_ci95_pct": [
+        19.8,
+        24.9
+      ],
+      "shortage_change_pct": -21.3
+    },
+    "buffer_15%": {
+      "manual": {
+        "prepared_total": 8940879,
+        "demand_total": 7457018,
+        "waste_total": 2284281,
+        "waste_pct_of_prepared": 25.55,
+        "shortage_total": 800420,
+        "shortage_pct_of_demand": 10.73,
+        "service_level_pct": 67.4
+      },
+      "ai_safety_factor": 1.2826,
+      "ai": {
+        "prepared_total": 8616519,
+        "demand_total": 7457018,
+        "waste_total": 1779852,
+        "waste_pct_of_prepared": 20.66,
+        "shortage_total": 620351,
+        "shortage_pct_of_demand": 8.32,
+        "service_level_pct": 67.4
+      },
+      "waste_reduction_pct": 22.1,
+      "waste_reduction_ci95_pct": [
+        19.5,
+        24.6
+      ],
+      "shortage_change_pct": -22.5
+    },
+    "buffer_20%": {
+      "manual": {
+        "prepared_total": 9329613,
+        "demand_total": 7457018,
+        "waste_total": 2582639,
+        "waste_pct_of_prepared": 27.68,
+        "shortage_total": 710044,
+        "shortage_pct_of_demand": 9.52,
+        "service_level_pct": 70.6
+      },
+      "ai_safety_factor": 1.3314,
+      "ai": {
+        "prepared_total": 8943879,
+        "demand_total": 7457018,
+        "waste_total": 2024010,
+        "waste_pct_of_prepared": 22.63,
+        "shortage_total": 537148,
+        "shortage_pct_of_demand": 7.2,
+        "service_level_pct": 70.6
+      },
+      "waste_reduction_pct": 21.6,
+      "waste_reduction_ci95_pct": [
+        19.2,
+        23.9
+      ],
+      "shortage_change_pct": -24.4
+    },
+    "buffer_30%": {
+      "manual": {
+        "prepared_total": 10107081,
+        "demand_total": 7457018,
+        "waste_total": 3219559,
+        "waste_pct_of_prepared": 31.85,
+        "shortage_total": 569496,
+        "shortage_pct_of_demand": 7.64,
+        "service_level_pct": 75.9
+      },
+      "ai_safety_factor": 1.4209,
+      "ai": {
+        "prepared_total": 9545343,
+        "demand_total": 7457018,
+        "waste_total": 2502948,
+        "waste_pct_of_prepared": 26.22,
+        "shortage_total": 414623,
+        "shortage_pct_of_demand": 5.56,
+        "service_level_pct": 75.9
+      },
+      "waste_reduction_pct": 22.3,
+      "waste_reduction_ci95_pct": [
+        20.1,
+        24.3
+      ],
+      "shortage_change_pct": -27.2
+    }
+  },
+  "headline": {
+    "manual_policy": "4-week average + 15% buffer",
+    "matched_key": "buffer_15%",
+    "manual": {
+      "prepared_total": 8940879,
+      "demand_total": 7457018,
+      "waste_total": 2284281,
+      "waste_pct_of_prepared": 25.55,
+      "shortage_total": 800420,
+      "shortage_pct_of_demand": 10.73,
+      "service_level_pct": 67.4
+    },
+    "ai_safety_factor": 1.2826,
+    "ai": {
+      "prepared_total": 8616519,
+      "demand_total": 7457018,
+      "waste_total": 1779852,
+      "waste_pct_of_prepared": 20.66,
+      "shortage_total": 620351,
+      "shortage_pct_of_demand": 8.32,
+      "service_level_pct": 67.4
+    },
+    "waste_reduction_pct": 22.1,
+    "waste_reduction_ci95_pct": [
+      19.5,
+      24.6
+    ],
+    "shortage_change_pct": -22.5,
+    "ai_policy_at_similar_service_level": "safety factor 1.2826"
+  }
+}

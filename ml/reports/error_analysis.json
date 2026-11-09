@@ -1,0 +1,224 @@
+{
+  "overall": {
+    "rows": 32698,
+    "WAPE_%": 27.94,
+    "Bias_%": -9.91
+  },
+  "promotion": [
+    {
+      "group": "e-mail promotion",
+      "rows": 1722,
+      "share_of_demand_pct": 8.7,
+      "WAPE_%": 33.88,
+      "Bias_%": -13.88
+    },
+    {
+      "group": "no e-mail promotion",
+      "rows": 30976,
+      "share_of_demand_pct": 91.3,
+      "WAPE_%": 27.37,
+      "Bias_%": -9.53
+    }
+  ],
+  "featured": [
+    {
+      "group": "homepage featured",
+      "rows": 2683,
+      "share_of_demand_pct": 14.7,
+      "WAPE_%": 28.18,
+      "Bias_%": -11.65
+    },
+    {
+      "group": "not featured",
+      "rows": 30015,
+      "share_of_demand_pct": 85.3,
+      "WAPE_%": 27.9,
+      "Bias_%": -9.62
+    }
+  ],
+  "discount": [
+    {
+      "group": "discounted (>1%)",
+      "rows": 7561,
+      "share_of_demand_pct": 25.6,
+      "WAPE_%": 31.66,
+      "Bias_%": -11.41
+    },
+    {
+      "group": "full price",
+      "rows": 25137,
+      "share_of_demand_pct": 74.4,
+      "WAPE_%": 26.66,
+      "Bias_%": -9.4
+    }
+  ],
+  "demand_size": [
+    {
+      "group": "low demand (lowest third)",
+      "rows": 11369,
+      "share_of_demand_pct": 6.1,
+      "WAPE_%": 53.94,
+      "Bias_%": 27.9
+    },
+    {
+      "group": "medium demand",
+      "rows": 10602,
+      "share_of_demand_pct": 20.2,
+      "WAPE_%": 33.56,
+      "Bias_%": -4.52
+    },
+    {
+      "group": "high demand (highest third)",
+      "rows": 10727,
+      "share_of_demand_pct": 73.8,
+      "WAPE_%": 24.27,
+      "Bias_%": -14.49
+    }
+  ],
+  "last_week_change": [
+    {
+      "group": "last week > 20% above average",
+      "rows": 8272,
+      "share_of_demand_pct": 25.1,
+      "WAPE_%": 29.65,
+      "Bias_%": -12.18
+    },
+    {
+      "group": "last week > 20% below average",
+      "rows": 9936,
+      "share_of_demand_pct": 21.9,
+      "WAPE_%": 32.94,
+      "Bias_%": -10.42
+    },
+    {
+      "group": "stable recent demand",
+      "rows": 14490,
+      "share_of_demand_pct": 52.9,
+      "WAPE_%": 25.06,
+      "Bias_%": -8.63
+    }
+  ],
+  "center_type": [
+    {
+      "group": "TYPE_A",
+      "rows": 18837,
+      "share_of_demand_pct": 56.4,
+      "WAPE_%": 27.65,
+      "Bias_%": -9.64
+    },
+    {
+      "group": "TYPE_B",
+      "rows": 6886,
+      "share_of_demand_pct": 26.9,
+      "WAPE_%": 25.84,
+      "Bias_%": -10.34
+    },
+    {
+      "group": "TYPE_C",
+      "rows": 6975,
+      "share_of_demand_pct": 16.8,
+      "WAPE_%": 32.25,
+      "Bias_%": -10.15
+    }
+  ],
+  "category": [
+    {
+      "group": "Beverages",
+      "rows": 8978,
+      "share_of_demand_pct": 34.2,
+      "WAPE_%": 24.38,
+      "Bias_%": -9.42
+    },
+    {
+      "group": "Biryani",
+      "rows": 1437,
+      "share_of_demand_pct": 0.7,
+      "WAPE_%": 44.9,
+      "Bias_%": -17.86
+    },
+    {
+      "group": "Desert",
+      "rows": 2113,
+      "share_of_demand_pct": 2.2,
+      "WAPE_%": 38.88,
+      "Bias_%": -15.52
+    },
+    {
+      "group": "Extras",
+      "rows": 993,
+      "share_of_demand_pct": 3.6,
+      "WAPE_%": 24.38,
+      "Bias_%": -2.45
+    },
+    {
+      "group": "Fish",
+      "rows": 1369,
+      "share_of_demand_pct": 1.8,
+      "WAPE_%": 37.94,
+      "Bias_%": -18.49
+    },
+    {
+      "group": "Other Snacks",
+      "rows": 2088,
+      "share_of_demand_pct": 4.3,
+      "WAPE_%": 29.79,
+      "Bias_%": -11.79
+    },
+    {
+      "group": "Pasta",
+      "rows": 1915,
+      "share_of_demand_pct": 1.5,
+      "WAPE_%": 44.47,
+      "Bias_%": -14.65
+    },
+    {
+      "group": "Pizza",
+      "rows": 2306,
+      "share_of_demand_pct": 8.4,
+      "WAPE_%": 34.76,
+      "Bias_%": -21.02
+    },
+    {
+      "group": "Rice Bowl",
+      "rows": 2310,
+      "share_of_demand_pct": 16.4,
+      "WAPE_%": 25.25,
+      "Bias_%": -5.41
+    },
+    {
+      "group": "Salad",
+      "rows": 2310,
+      "share_of_demand_pct": 9.6,
+      "WAPE_%": 27.0,
+      "Bias_%": -0.92
+    },
+    {
+      "group": "Sandwich",
+      "rows": 2306,
+      "share_of_demand_pct": 11.8,
+      "WAPE_%": 28.37,
+      "Bias_%": -14.65
+    },
+    {
+      "group": "Seafood",
+      "rows": 1671,
+      "share_of_demand_pct": 1.5,
+      "WAPE_%": 43.32,
+      "Bias_%": -16.93
+    },
+    {
+      "group": "Soup",
+      "rows": 909,
+      "share_of_demand_pct": 1.4,
+      "WAPE_%": 29.75,
+      "Bias_%": -4.7
+    },
+    {
+      "group": "Starters",
+      "rows": 1993,
+      "share_of_demand_pct": 2.7,
+      "WAPE_%": 32.73,
+      "Bias_%": -10.88
+    }
+  ]
+}

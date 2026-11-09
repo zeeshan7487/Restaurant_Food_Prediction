@@ -1,0 +1,19 @@
+sequenceDiagram
+  autonumber
+  actor U as Manager
+  participant W as PHP web app
+  participant DB as MySQL
+  participant S as Python ML service
+  participant M as Trained model
+  U->>W: choose kitchen, meal, week, price, promotion (POST + CSRF token)
+  W->>W: check session, role and CSRF token, validate inputs
+  W->>DB: SELECT last 4 weeks of orders (prepared statement)
+  DB-->>W: history rows
+  W->>S: POST /predict (JSON: inputs, kitchen and meal details, history)
+  S->>S: validate JSON, build features (lags, price ratio, seasonality)
+  S->>M: predict(features)
+  M-->>S: predicted demand
+  S->>S: multiply by safety factors (50 to 95 percent levels)
+  S-->>W: JSON (forecast, recommended preparation, reliability)
+  W->>DB: INSERT prediction (audit trail)
+  W-->>U: result page: forecast, recommendation, chart

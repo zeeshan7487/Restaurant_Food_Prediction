@@ -1,0 +1,15 @@
+flowchart TB
+  A["Raw CSV files<br/>train, meal_info, fulfilment_center_info"] --> B["Data quality checks<br/>missing values, duplicates, orphan keys"]
+  B --> C["Feature engineering<br/>lags 1-4 by week number, rolling means,<br/>price ratio, promotion, seasonality, categories"]
+  C --> D["Time-based split<br/>train | validation | test (newest weeks)"]
+  D --> E["Train candidates on train weeks<br/>2 baselines + ridge + random forest + gradient boosting"]
+  E --> F["Compare on validation weeks<br/>choose best machine-learning model"]
+  F --> G["Learn safety factors<br/>quantiles of actual / predicted on validation"]
+  F --> H["Refit on train + validation"]
+  H --> I["Score ONCE on the test weeks"]
+  G --> J["Waste simulation on test weeks<br/>manual policy vs AI policy at equal coverage"]
+  I --> J
+  H --> K[("Saved model file<br/>used by the web service")]
+  G --> K
+  I --> L["Metrics, charts, reports"]
+  J --> L

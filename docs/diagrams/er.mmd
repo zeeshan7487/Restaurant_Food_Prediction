@@ -1,0 +1,59 @@
+erDiagram
+  USERS ||--o{ WEEKLY_RECORDS : "enters"
+  USERS ||--o{ PREDICTIONS : "requests"
+  CENTERS ||--o{ WEEKLY_RECORDS : "has"
+  MEALS ||--o{ WEEKLY_RECORDS : "is sold in"
+  CENTERS ||--o{ PREDICTIONS : "for"
+  MEALS ||--o{ PREDICTIONS : "for"
+  USERS {
+    int user_id PK
+    string username UK
+    string password_hash
+    string full_name
+    enum role "admin, manager"
+    int failed_logins
+    datetime locked_until
+    datetime created_at
+  }
+  CENTERS {
+    int center_id PK
+    string city_code
+    string region_code
+    string center_type
+    decimal op_area
+  }
+  MEALS {
+    int meal_id PK
+    string category
+    string cuisine
+  }
+  WEEKLY_RECORDS {
+    int record_id PK
+    int week_no
+    int center_id FK
+    int meal_id FK
+    decimal checkout_price
+    decimal base_price
+    bool emailer_for_promotion
+    bool homepage_featured
+    int orders_sold
+    int prepared_qty
+    int waste_qty
+    enum waste_source "recorded, simulated"
+    int created_by FK
+    datetime created_at
+  }
+  PREDICTIONS {
+    int prediction_id PK
+    int week_no
+    int center_id FK
+    int meal_id FK
+    decimal checkout_price
+    decimal base_price
+    decimal predicted_demand
+    decimal service_level
+    int recommended_prep
+    string model_name
+    int created_by FK
+    datetime created_at
+  }

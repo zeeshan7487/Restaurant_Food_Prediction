@@ -1,0 +1,32 @@
+flowchart TB
+  U["User<br/>(manager / administrator)<br/>Web browser"]
+  subgraph WEB["Web application - Apache + PHP"]
+    direction TB
+    P1["Pages: dashboard, records,<br/>predict, history, results, users"]
+    P2["Security layer: login, sessions,<br/>CSRF tokens, role checks"]
+    P3["Data-access layer (PDO,<br/>prepared statements)"]
+    P4["ML client (cURL, JSON)"]
+  end
+  DB[("MySQL database<br/>users, centers, meals,<br/>weekly_records, predictions")]
+  subgraph ML["Prediction service - Python + Flask"]
+    direction TB
+    S1["/predict endpoint<br/>validation + feature building"]
+    S2["Trained model<br/>(gradient boosting)"]
+    S1 --> S2
+  end
+  subgraph OFF["Offline training pipeline - Python"]
+    direction TB
+    T1["Public dataset (CSV)"]
+    T2["Cleaning, feature engineering,<br/>time-based split"]
+    T3["Train + compare models,<br/>waste simulation"]
+    T1 --> T2 --> T3
+  end
+  U -- "HTTP (HTML forms)" --> P1
+  P1 --- P2
+  P1 --> P3
+  P1 --> P4
+  P3 <--> DB
+  P4 -- "JSON over HTTP<br/>127.0.0.1 only" --> S1
+  T3 -- "saves model file" --> S2
+  T3 -- "reports + charts" --> P1
+  T2 -. "import script loads data" .-> DB

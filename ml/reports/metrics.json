@@ -1,0 +1,178 @@
+{
+  "environment": {
+    "python": "3.13.17",
+    "scikit_learn": "1.9.1",
+    "pandas": "3.0.5",
+    "numpy": "2.5.3",
+    "os": "Linux-6.18.44-fc-v153-x86_64-with-glibc2.39"
+  },
+  "trained_on_synthetic_data": false,
+  "data_quality": {
+    "order_rows": 456548,
+    "meals": 51,
+    "centers": 77,
+    "week_min": 1,
+    "week_max": 145,
+    "missing_values_per_column": {
+      "id": 0,
+      "week": 0,
+      "center_id": 0,
+      "meal_id": 0,
+      "checkout_price": 0,
+      "base_price": 0,
+      "emailer_for_promotion": 0,
+      "homepage_featured": 0,
+      "num_orders": 0
+    },
+    "duplicate_rows": 0,
+    "orders_min": 13,
+    "orders_median": 136.0,
+    "orders_mean": 261.87,
+    "orders_max": 24299,
+    "orders_std": 395.92,
+    "share_rows_with_promotion": 0.0812,
+    "share_rows_featured": 0.1092,
+    "rows_with_orphan_meal_id": 0,
+    "rows_with_orphan_center_id": 0
+  },
+  "split": {
+    "train_weeks": [
+      2,
+      125
+    ],
+    "validation_weeks": [
+      126,
+      135
+    ],
+    "test_weeks": [
+      136,
+      145
+    ],
+    "train_rows": 385911,
+    "validation_rows": 32683,
+    "test_rows": 32698
+  },
+  "best_model": "Gradient boosting",
+  "comparison": {
+    "Baseline: same as last week": {
+      "validation": {
+        "MAE": 119.53,
+        "RMSE": 345.54,
+        "WAPE_%": 45.22,
+        "RMSLE": 0.7075,
+        "R2": 0.3282,
+        "Bias_%": -0.24
+      },
+      "test": {
+        "MAE": 79.36,
+        "RMSE": 136.33,
+        "WAPE_%": 34.8,
+        "RMSLE": 0.6691,
+        "R2": 0.7575,
+        "Bias_%": 1.46
+      }
+    },
+    "Baseline: 4-week average": {
+      "validation": {
+        "MAE": 121.01,
+        "RMSE": 335.41,
+        "WAPE_%": 45.78,
+        "RMSLE": 0.6681,
+        "R2": 0.367,
+        "Bias_%": -1.25
+      },
+      "test": {
+        "MAE": 81.95,
+        "RMSE": 162.89,
+        "WAPE_%": 35.94,
+        "RMSLE": 0.6267,
+        "R2": 0.6538,
+        "Bias_%": 4.26
+      }
+    },
+    "Ridge regression": {
+      "validation": {
+        "MAE": 144.0,
+        "RMSE": 2123.56,
+        "WAPE_%": 54.48,
+        "RMSLE": 0.615,
+        "R2": -24.3727,
+        "Bias_%": 0.26
+      },
+      "test": {
+        "MAE": 92.43,
+        "RMSE": 314.48,
+        "WAPE_%": 40.53,
+        "RMSLE": 0.613,
+        "R2": -0.2904,
+        "Bias_%": -11.03
+      }
+    },
+    "Random forest": {
+      "validation": {
+        "MAE": 79.91,
+        "RMSE": 214.31,
+        "WAPE_%": 30.23,
+        "RMSLE": 0.4969,
+        "R2": 0.7416,
+        "Bias_%": -10.23
+      },
+      "test": {
+        "MAE": 63.94,
+        "RMSE": 110.42,
+        "WAPE_%": 28.04,
+        "RMSLE": 0.5001,
+        "R2": 0.8409,
+        "Bias_%": -9.3
+      }
+    },
+    "Gradient boosting": {
+      "validation": {
+        "MAE": 78.79,
+        "RMSE": 211.1,
+        "WAPE_%": 29.81,
+        "RMSLE": 0.4847,
+        "R2": 0.7493,
+        "Bias_%": -10.76
+      },
+      "test": {
+        "MAE": 63.71,
+        "RMSE": 110.46,
+        "WAPE_%": 27.94,
+        "RMSLE": 0.4878,
+        "R2": 0.8408,
+        "Bias_%": -9.91
+      }
+    }
+  },
+  "safety_factors": {
+    "0.5": 1.0561,
+    "0.7": 1.316,
+    "0.8": 1.5092,
+    "0.9": 1.8214,
+    "0.95": 2.158
+  },
+  "feature_importance": {
+    "lag_mean_4": 61.8733,
+    "lag_1": 44.4663,
+    "category": 28.9464,
+    "checkout_price": 24.6746,
+    "cuisine": 21.4657,
+    "emailer_for_promotion": 15.4662,
+    "lag_4": 12.4745,
+    "op_area": 7.7873,
+    "lag_mean_2": 7.5449,
+    "homepage_featured": 6.2386,
+    "price_ratio": 3.848,
+    "lag_3": 2.8471,
+    "city_code": 2.642,
+    "base_price": 2.535,
+    "region_code": 2.3032,
+    "discount_pct": 2.1057,
+    "lag_2": 1.9535,
+    "week_cos": 0.9959,
+    "lag_trend": 0.8237,
+    "center_type": 0.6522,
+    "week_sin": 0.31
+  }
+}

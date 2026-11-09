@@ -1,0 +1,28 @@
+flowchart TB
+  USER["External entity:<br/>User"]
+  P1(["1.0<br/>Manage weekly<br/>records"])
+  P2(["2.0<br/>Predict demand<br/>and recommend"])
+  P3(["3.0<br/>Report and<br/>analyse"])
+  P4(["4.0<br/>Manage users<br/>and log in"])
+  ML(["5.0<br/>Forecast<br/>(ML service)"])
+  D1[("D1 weekly_records")]
+  D2[("D2 predictions")]
+  D3[("D3 users")]
+  D4[("D4 trained model file")]
+  D5[("D5 result reports")]
+  USER -- "record details" --> P1
+  P1 -- "validated record" --> D1
+  USER -- "kitchen, meal, week,<br/>price, promotion" --> P2
+  D1 -- "last 4 weeks of orders" --> P2
+  P2 -- "request (JSON)" --> ML
+  D4 -- "model" --> ML
+  ML -- "forecast + safety levels" --> P2
+  P2 -- "prediction" --> D2
+  P2 -- "recommendation" --> USER
+  D1 -- "orders, waste" --> P3
+  D2 -- "predicted vs actual" --> P3
+  D5 -- "metrics, charts" --> P3
+  P3 -- "dashboard, tables, charts" --> USER
+  USER -- "credentials, user details" --> P4
+  P4 <--> D3
+  P4 -- "session / access decision" --> USER

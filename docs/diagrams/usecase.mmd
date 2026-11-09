@@ -1,0 +1,26 @@
+flowchart LR
+  M(["Manager"])
+  A(["Administrator"])
+  subgraph SYS["Food Demand and Waste Prediction System"]
+    UC1(["Log in / log out"])
+    UC2(["View dashboard<br/>(orders, waste rate)"])
+    UC3(["Add or edit weekly record"])
+    UC4(["Search, filter and<br/>export records"])
+    UC5(["Predict demand and get a<br/>preparation recommendation"])
+    UC6(["Review prediction history<br/>and accuracy"])
+    UC7(["View model performance<br/>and waste study"])
+    UC8(["Change own password"])
+    UC9(["Delete records"])
+    UC10(["Manage users"])
+  end
+  M --- UC1
+  M --- UC2
+  M --- UC3
+  M --- UC4
+  M --- UC5
+  M --- UC6
+  M --- UC7
+  M --- UC8
+  A --- UC9
+  A --- UC10
+  A -. "also does everything<br/>a manager can" .-> M
